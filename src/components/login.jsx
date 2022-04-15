@@ -27,9 +27,9 @@ function Login() {
                 "password": password
             }) 
             if(fetchedData){
-                {
+                
                   alert("Success")
-                }
+                
             }
         } catch (error) {
             console.log( error) 
