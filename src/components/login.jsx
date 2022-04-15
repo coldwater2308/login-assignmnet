@@ -10,7 +10,7 @@ import axios from "axios"
 function Login() { 
     const [email, setemail] = useState("")
     const [password, setpassword] = useState("") 
-    const [open, setOpen] = useState(false);
+    
 
     function handleChange(e){
         if(e.target.type==='password')
