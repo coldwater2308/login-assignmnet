@@ -19,11 +19,7 @@ function Login() {
         setemail(e.target.value) 
         
     } 
-    const handleClose = (event, reason) => {
-        if (reason === 'clickaway') {
-          return;
-        }
-    }
+
     async function handleSubmit(){ 
         try {
             const fetchedData = await axios.post("https://reqres.in/api/login",{
@@ -49,27 +45,25 @@ function Login() {
 
     <div class="login">
 
-   <div class="login-card">
+      <div class="login-card">
 
   
-   <div class="login-form">
-<h1>Welcome Back</h1>
-<h4>Hello Guyz</h4>
-<input type="text" placeholder="Email Address *" onChange={handleChange} value={email}></input>
-<input type="password" placeholder="Password *" onChange={handleChange} value={password}></input>  
+        <div class="login-form">
+          <h1>Welcome Back</h1>
+          <h4>Hello Guyz</h4>
+          <input type="text" placeholder="Email Address *" onChange={handleChange} value={email}></input>
+          <input type="password" placeholder="Password *" onChange={handleChange} value={password}></input>  
+          <button onClick={handleSubmit}>Login</button>
+          <div className='bottom'>
+            <span className='remember-password'> <Checkbox /> Remember Password</span>
+          <a className='forgot-password'>Forgot Password?</a>
 
-<button onClick={handleSubmit}>Login</button>
-<div className='bottom'>
-
-<span className='remember-password'> <Checkbox /> Remember Password</span>
-<a className='forgot-password'>Forgot Password?</a>
-
-</div>
-   </div> 
-   <img src={image} alt=""></img>
+          </div>
+        </div> 
+        <img src={image} alt=""></img>
 
 
-   </div>
+      </div>
 
 
 
